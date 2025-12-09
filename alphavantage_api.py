@@ -641,7 +641,7 @@ class AlphaVantage():
         data = r.json()
 
         df = pd.DataFrame.from_dict(data["annualReports"])
-        return df
+        return df.T
     
     def earnings(self, ticker: str):
         """
